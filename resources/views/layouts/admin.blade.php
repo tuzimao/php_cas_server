@@ -58,8 +58,9 @@
 
 @yield('content')
 
-<script src="{{ elixir('js/common.js') }}"></script>
-<script src="{{ elixir('js/admin/admin.js') }}"></script>
+<script src="/js/common.js"></script>
+
+<script ('js/admin/admin.js') }}"></script>
 @yield('javascript')
 <script>
     window.app = new Vue({

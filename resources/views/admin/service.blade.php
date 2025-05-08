@@ -126,5 +126,6 @@
             }
         };
     </script>
-    <script src="{{ elixir('js/admin/service/index.js') }}"></script>
+        <script src="/js/admin/service/index.js"></script>
+
 @endsection

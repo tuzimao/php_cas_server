@@ -81,6 +81,6 @@
             'message.confirm_logout': '@lang('message.confirm_logout')'
         };
     </script>
-    <script src="{{ elixir('js/front/home.js') }}"></script>
+    <script src="/js/front/home.js"></script>
 @endsection
 

@@ -1,0 +1,5 @@
+{
+  "terminal.integrated.env.windows": {
+    "PATH": "E:\\tools\\node\\node-v14.21.3-win-x64;${env:PATH}"
+  }
+}

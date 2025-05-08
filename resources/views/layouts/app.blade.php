@@ -14,7 +14,8 @@
 </head>
 <body v-cloak>
     @yield('content')
-    <script src="{{ elixir('js/common.js') }}"></script>
+    <script src="/js/common.js"></script>
+
     @yield('javascript')
     <script>
         window.app = new Vue({

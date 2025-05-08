@@ -13,7 +13,9 @@ class AddProfileToUserOauthTable extends Migration
     public function up()
     {
         Schema::table('user_oauth', function (Blueprint $table) {
-            $table->text('profile')->after('user_id')->collation('utf8mb4_unicode_ci');
+            // 👇 添加 nullable() 或 default('')，以兼容 SQLite
+            $table->text('profile')->nullable()->after('user_id')->collation('utf8mb4_unicode_ci');
+            // 如果你更希望它不为 null，也可以用 ->default('')
         });
     }
 
