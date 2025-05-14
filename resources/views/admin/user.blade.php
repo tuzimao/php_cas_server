@@ -186,5 +186,5 @@
             }
         };
     </script>
-    <script ('js/admin/user/index.js') }}"></script>
+    <script src="/js/admin/user/index.js"></script>
 @endsection

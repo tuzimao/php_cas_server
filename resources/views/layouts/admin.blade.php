@@ -7,12 +7,13 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
-    <link rel="stylesheet" href="{{ elixir('css/sb-admin-2.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/sb-admin-2.css">
     @yield('stylesheet')
     <script>window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!};</script>
 </head>
 <body v-cloak>
+    <div id="app">
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
     <div class="navbar-header">
         <a class="navbar-brand" href="{{ route('admin_home', [], false) }}">PHP CAS</a>
@@ -60,12 +61,13 @@
 
 <script src="/js/common.js"></script>
 
-<script ('js/admin/admin.js') }}"></script>
+<script src="/js/admin/admin.js"></script>
 @yield('javascript')
 <script>
     window.app = new Vue({
         el: 'body'
     });
 </script>
+<div id="app">
 </body>
 </html>
