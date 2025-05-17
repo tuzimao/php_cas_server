@@ -2,6 +2,7 @@
 
 return [
     'lock_timeout'      => env('CAS_LOCK_TIMEOUT', 5000),
+    'lock_driver' => env('CAS_LOCK_DRIVER', 'file'),
     'ticket_expire'     => env('CAS_TICKET_EXPIRE', 300),
     'ticket_len'        => env('CAS_TICKET_LEN', 32),
     'pg_ticket_expire'  => env('CAS_PROXY_GRANTING_TICKET_EXPIRE', 7200),

@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+<div id="app">
 <admin-user-index inline-template>
     <div id="page-wrapper">
         <!-- /.row -->
@@ -171,12 +172,13 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 </admin-user-index>
+</div>
 @endsection
 
 @section('javascript')
     <script>
         Laravel.data = {
-            users: {!! json_encode($users) !!},
+            users: {!! json_encode($users->items()) !!},
             query: {!! json_encode($query) !!}
         };
         Laravel.routes = {

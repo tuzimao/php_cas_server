@@ -12,6 +12,7 @@ use Leo108\CAS\Contracts\TicketLocker as TicketLockerInterface;
 use Leo108\CAS\Repositories\ServiceRepository as ServiceRepositoryBase;
 use Leo108\CASServer\OAuth\PluginCenter;
 use NinjaMutex\Lock\LockAbstract;
+use App\Providers\SimpleFileLock;
 use NinjaMutex\Lock\MySqlLock;
 
 class AppServiceProvider extends ServiceProvider
@@ -43,9 +44,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             LockAbstract::class,
             function () {
-                $conf = config('database.connections.mysql');
-
-                return new MySqlLock($conf['username'], $conf['password'], $conf['host']);
+                return new SimpleFileLock(storage_path('locks'));
             }
         );
         $this->app->singleton(
